@@ -1,0 +1,21 @@
+"use client";
+
+import styled from "styled-components";
+import Start from "./start";
+
+const Nav = styled.nav`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: var(--color-gradient-default);
+`;
+
+export default function Taskbar() {
+  return (
+    <Nav>
+      <Start />
+    </Nav>
+  );
+}

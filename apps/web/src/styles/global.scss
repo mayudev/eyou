@@ -1,0 +1,13 @@
+@import "_palette.scss";
+
+:root {
+  background: url("/lainbg.jpg");
+  color: var(--color-fg-default);
+
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
