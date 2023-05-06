@@ -25,6 +25,9 @@ importers:
       fugue:
         specifier: workspace:^
         version: link:../../packages/fugue
+      mutant_svg:
+        specifier: workspace:^
+        version: link:../../packages/mutant_svg
       next:
         specifier: 13.3.1
         version: 13.3.1(react-dom@18.2.0)(react@18.2.0)(sass@1.62.0)
@@ -49,6 +52,8 @@ importers:
         version: 5.1.26
 
   packages/fugue: {}
+
+  packages/mutant_svg: {}
 
 packages:
 

@@ -19,10 +19,11 @@ const Title = styled.div`
 `;
 
 interface Props {
-  title: string;
+  title: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }
 
-export default function Frame({ title, children }: PropsWithChildren<Props>) {
+export default function Frame({ title, children }: Props) {
   return (
     <Container>
       <Title>{title}</Title>

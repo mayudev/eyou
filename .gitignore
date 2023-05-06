@@ -4,3 +4,6 @@
 
 # pnpm
 node_modules
+
+# temp
+packages/mutant_svg/emoji

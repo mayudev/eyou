@@ -4,6 +4,9 @@ import styled from "styled-components";
 import Button from "../components/elements/button";
 import Frame from "../components/signup/frame";
 import BasicInput from "../components/elements/basic-input";
+import wand from "mutant_svg/emoji/magic_wand.svg";
+import Image from "next/image";
+import Flex from "../components/helpers/flex";
 
 const Buttons = styled.div`
   display: flex;
@@ -23,7 +26,14 @@ const FormGrid = styled.div`
 export default function Signup() {
   return (
     <div>
-      <Frame title="login/signup">
+      <Frame
+        title={
+          <Flex>
+            <Image src={wand} alt="Wand emoji" height={32} />
+            <span>&nbsp;&nbsp;login/signup</span>
+          </Flex>
+        }
+      >
         <FormGrid>
           <span>username</span>
           <BasicInput />
