@@ -9,15 +9,14 @@ const Frame = styled.div`
 
   overflow: hidden;
 
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
 
   box-shadow: 16px 16px 0 rgba(0, 0, 0, 0.25);
 `;
 
 const Decorations = styled.div`
   background: var(--color-gradient-default);
-  padding: 12px;
+  padding: 12px 16px;
 `;
 
 const WindowTitle = styled.span`

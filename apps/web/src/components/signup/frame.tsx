@@ -7,7 +7,7 @@ const Container = styled.div`
   background: var(--color-component-bg);
   box-shadow: 16px 16px 0 var(--color-component-shadow);
 
-  padding: 16px;
+  padding: 20px;
   border-radius: 8px;
 
   margin-right: 12px;
