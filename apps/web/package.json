@@ -20,6 +20,7 @@
     "react-dom": "18.2.0",
     "sass": "^1.62.0",
     "styled-components": "^5.3.10",
+    "types": "workspace:^",
     "typescript": "5.0.4"
   },
   "devDependencies": {
