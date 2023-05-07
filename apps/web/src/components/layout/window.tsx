@@ -20,7 +20,7 @@ const Decorations = styled.div`
 `;
 
 const WindowTitle = styled.span`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 
   color: white;
@@ -30,7 +30,7 @@ interface Props {
   title: string;
 
   // meant width
-  meant: number;
+  meant?: number;
 }
 
 export default function Window({ title, meant, children }: PropsWithChildren<Props>) {
