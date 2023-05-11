@@ -10,10 +10,10 @@ interface Props {
 }
 
 const Manager = styled.div<Props>`
-  height: calc(100vh - 54px);
+  height: calc(100vh - var(--taskbar-height));
   box-sizing: border-box;
 
-  ${(props) =>
+  ${props =>
     props.center &&
     `
     display: flex;
@@ -21,7 +21,7 @@ const Manager = styled.div<Props>`
     justify-content: center;
   `}
 
-  ${(props) =>
+  ${props =>
     props.grid &&
     `
     display: grid;
@@ -29,9 +29,12 @@ const Manager = styled.div<Props>`
     gap: 16px;
   `}
 
-  ${(props) => props.padding && `padding: ${props.padding}px;`}
+  ${props => props.padding && `padding: ${props.padding}px;`}
 `;
 
-export default function WindowManager({ children, ...args }: PropsWithChildren<Props>) {
+export default function WindowManager({
+  children,
+  ...args
+}: PropsWithChildren<Props>) {
   return <Manager {...args}>{children}</Manager>;
 }

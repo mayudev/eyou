@@ -9,6 +9,9 @@ const Nav = styled.nav`
   left: 0;
   right: 0;
 
+  display: flex;
+  height: var(--taskbar-height);
+
   background: var(--color-gradient-default);
 `;
 
