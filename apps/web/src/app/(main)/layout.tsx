@@ -4,6 +4,7 @@ import Window from "../../components/layout/window";
 import WindowColumn from "../../components/layout/windowColumn";
 import { BaseAccount } from "types";
 import YouPanel from "./you";
+import Navigation from "./navigation";
 
 async function getData(): Promise<BaseAccount> {
   // TODO return currently logged user's data (username, avatar, acct)
@@ -28,7 +29,9 @@ export default async function MainLayout({ children }: PropsWithChildren<{}>) {
         <Window title="You">
           <YouPanel data={data} />
         </Window>
-        <Window title="Navigation"></Window>
+        <Window title="Navigation">
+          <Navigation />
+        </Window>
       </WindowColumn>
       <span></span>
     </WindowManager>

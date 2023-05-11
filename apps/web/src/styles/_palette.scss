@@ -11,9 +11,17 @@
   --color-primary: #6c456c;
   --color-primary-h: #955e95;
 
+  --color-pink-bright: #bc88bd;
+  --color-pink-dark: #9d6f9e;
+
   --color-window-bg: #f1e9fc;
 
-  --color-gradient-default: linear-gradient(180deg, #9d6f9e, #bc88bd 50%, #785279);
+  --color-gradient-default: linear-gradient(
+    180deg,
+    #9d6f9e,
+    #bc88bd 50%,
+    #785279
+  );
 
   --color-component-bg: #eedaee;
   --color-component-shadow: #d1b1d1;
