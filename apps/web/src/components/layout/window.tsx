@@ -1,5 +1,6 @@
 "use client";
 
+import Image, { StaticImageData } from "next/image";
 import { PropsWithChildren } from "react";
 import styled from "styled-components";
 
@@ -26,17 +27,26 @@ const WindowTitle = styled.span`
   color: white;
 `;
 
+const WindowIcon = styled(Image)``;
+
 interface Props {
   title: string;
+  icon?: string | StaticImageData;
 
   // meant width
   meant?: number;
 }
 
-export default function Window({ title, meant, children }: PropsWithChildren<Props>) {
+export default function Window({
+  title,
+  icon,
+  meant,
+  children,
+}: PropsWithChildren<Props>) {
   return (
     <Frame style={{ maxWidth: meant + "px" }}>
       <Decorations>
+        {icon && <WindowIcon src={icon} alt={title} height={32} />}
         <WindowTitle>{title}</WindowTitle>
       </Decorations>
       <div>{children}</div>
