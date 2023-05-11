@@ -7,5 +7,5 @@ interface Props {
 }
 
 export default styled.p<Props>`
-  ${(props) => props.significant && `font-size: 18px`};
+  ${props => props.significant && `font-size: 18px`};
 `;
