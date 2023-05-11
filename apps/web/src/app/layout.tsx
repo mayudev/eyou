@@ -5,6 +5,9 @@ import StyledComponentsRegistry from "../lib/registry";
 
 export const metadata = {
   title: "eyou social",
+  icons: {
+    icon: "favicon.png",
+  },
 };
 
 export default function RootLayout({
