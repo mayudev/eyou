@@ -7,6 +7,7 @@ import BasicInput from "../components/elements/basic-input";
 import wand from "mutant_svg/emoji/magic_wand.svg";
 import Image from "next/image";
 import Flex from "../components/helpers/flex";
+import { useRouter } from "next/navigation";
 
 const Buttons = styled.div`
   display: flex;
@@ -24,6 +25,13 @@ const FormGrid = styled.div`
 `;
 
 export default function Signup() {
+  const router = useRouter();
+
+  const redir = () => {
+    // TODO: replace with actual login/signup flow
+    router.push("/home");
+  };
+
   return (
     <div>
       <Frame
@@ -41,8 +49,8 @@ export default function Signup() {
           <BasicInput type="password" />
         </FormGrid>
         <Buttons>
-          <Button>log in</Button>
-          <Button>sign up</Button>
+          <Button onClick={redir}>log in</Button>
+          <Button onClick={redir}>sign up</Button>
         </Buttons>
       </Frame>
     </div>
