@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import Start from "./start";
+import Start from "./start/startButton";
 
 const Nav = styled.nav`
   position: fixed;
