@@ -4,7 +4,7 @@ export type Visibility =
   | "public"
   | "unlisted"
   | "private"
-  | "friends"
+  | "mutuals"
   | "direct";
 
 export interface Status {
