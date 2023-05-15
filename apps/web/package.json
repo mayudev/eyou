@@ -20,6 +20,7 @@
     "fugue": "workspace:^",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
+    "msw": "^1.2.1",
     "mutant_svg": "workspace:^",
     "next": "13.4.1",
     "react": "18.2.0",
@@ -34,5 +35,8 @@
     "@types/styled-components": "^5.1.26",
     "@types/testing-library__jest-dom": "^5.14.5",
     "jest-dom": "link:@types/@testing-library/jest-dom"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

@@ -2,6 +2,7 @@ import "@fontsource/lexend";
 import "@/styles/global.scss";
 import Taskbar from "../components/layout/taskbar";
 import StyledComponentsRegistry from "../lib/registry";
+import "../mocks";
 
 export const metadata = {
   title: "eyou social",
