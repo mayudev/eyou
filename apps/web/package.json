@@ -6,15 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@fontsource/lexend": "^4.5.15",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@types/node": "18.16.0",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
     "eslint-config-next": "^13.4.1",
     "fugue": "workspace:^",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "mutant_svg": "workspace:^",
     "next": "13.4.1",
     "react": "18.2.0",
@@ -25,6 +30,9 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.26"
+    "@types/jest": "^29.5.1",
+    "@types/styled-components": "^5.1.26",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "jest-dom": "link:@types/@testing-library/jest-dom"
   }
 }
