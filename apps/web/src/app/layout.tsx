@@ -2,7 +2,6 @@ import "@fontsource/lexend";
 import "@/styles/global.scss";
 import Taskbar from "../components/layout/taskbar";
 import StyledComponentsRegistry from "../lib/registry";
-import "../mocks";
 
 export const metadata = {
   title: "eyou social",
@@ -11,13 +10,14 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
   children,
 }: {
   children: React.ReactNode;
 }) {
+  await import("../mocks");
   return (
     <html lang="en">
       <body>

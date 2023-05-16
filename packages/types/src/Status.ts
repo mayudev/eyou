@@ -16,7 +16,7 @@ export interface Status {
   visibility: Visibility;
   sensitive: boolean;
   spoiler_text: string;
-  media_attachment: null; // TODO
+  media_attachments: null[]; // TODO
   application?: null; // TODO
   mentions: null; // TODO
   tags: null; // TODO
