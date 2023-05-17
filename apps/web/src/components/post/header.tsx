@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import Button from "../elements/button";
 import Avatar from "./avatar";
+import dayjs from "../../lib/dayjs";
 
 interface Props {
   avatar: string;
@@ -12,7 +13,31 @@ interface Props {
   replyCount: number;
 }
 
-const Username = styled.div``;
+const Container = styled.div`
+  background: var(--color-component-bg);
+
+  display: flex;
+
+  padding: 12px;
+  align-items: center;
+`;
+
+const PostInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+`;
+const DisplayName = styled.span``;
+const PostTimestamp = styled.span`
+  color: var(--color-disabled);
+`;
+const Username = styled.span`
+  font-weight: 700;
+`;
+const Account = styled.span`
+  color: var(--color-disabled);
+  margin-left: 4px;
+`;
 
 export default function Header({
   avatar,
@@ -21,20 +46,23 @@ export default function Header({
   createdAt,
   replyCount,
 }: Props) {
+  const date = dayjs(createdAt);
+
   return (
-    <div>
-      <Avatar
-        size={128}
-        src={avatar}
-        alt={`${displayName}'s profile picture`}
-      />
-      <Username>
-        <strong>{displayName}</strong>
-        <span>@{acct}</span>
-      </Username>
+    <Container>
+      <Avatar size={48} src={avatar} alt={`${displayName}'s profile picture`} />
+      <PostInfo>
+        <DisplayName>
+          <Username>{displayName}</Username>
+          <Account>@{acct}</Account>
+        </DisplayName>
+        <PostTimestamp title={date.format("ddd, MMM D, YYYY h:mm A")}>
+          {date.fromNow()}
+        </PostTimestamp>
+      </PostInfo>
       <span style={{ flex: 1 }} />
       <Button>replies ({replyCount})</Button>
       <Button>reply</Button>
-    </div>
+    </Container>
   );
 }

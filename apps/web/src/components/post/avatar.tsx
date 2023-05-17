@@ -10,7 +10,7 @@ interface Props {
 const Element = styled(Image)`
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
 `;
 
 export default function Avatar({ src, size, alt = "" }: Props) {

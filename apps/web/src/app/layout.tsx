@@ -3,6 +3,11 @@ import "@/styles/global.scss";
 import Taskbar from "../components/layout/taskbar";
 import StyledComponentsRegistry from "../lib/registry";
 
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+
+dayjs.extend(relativeTime);
+
 export const metadata = {
   title: "eyou social",
   icons: {

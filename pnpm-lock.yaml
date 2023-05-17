@@ -28,6 +28,9 @@ importers:
       '@types/react-dom':
         specifier: 18.2.0
         version: 18.2.0
+      dayjs:
+        specifier: ^1.11.7
+        version: 1.11.7
       eslint-config-next:
         specifier: ^13.4.1
         version: 13.4.1(eslint@8.40.0)(typescript@5.0.4)
@@ -1904,6 +1907,10 @@ packages:
       abab: 2.0.6
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
+    dev: false
+
+  /dayjs@1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
     dev: false
 
   /debug@3.2.7:
