@@ -3,6 +3,7 @@
 import { Status } from "types";
 import Header from "./header";
 import styled from "styled-components";
+import PostFooter from "./footer";
 
 interface Props {
   post: Status;
@@ -31,6 +32,7 @@ export default function Post({ post }: Props) {
         replyCount={post.replies_count}
       />
       <Contents>{post.content}</Contents>
+      <PostFooter replyCount={post.replies_count} />
     </PostContainer>
   );
 }

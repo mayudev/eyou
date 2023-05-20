@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import Button from "../elements/button";
 import Avatar from "./avatar";
 import dayjs from "../../lib/dayjs";
 
@@ -44,7 +43,6 @@ export default function Header({
   displayName,
   acct,
   createdAt,
-  replyCount,
 }: Props) {
   const date = dayjs(createdAt);
 
@@ -61,8 +59,6 @@ export default function Header({
         </PostTimestamp>
       </PostInfo>
       <span style={{ flex: 1 }} />
-      <Button>replies ({replyCount})</Button>
-      <Button>reply</Button>
     </Container>
   );
 }
