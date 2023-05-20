@@ -32,7 +32,11 @@ export default function Post({ post }: Props) {
         replyCount={post.replies_count}
       />
       <Contents>{post.content}</Contents>
-      <PostFooter replyCount={post.replies_count} />
+      <PostFooter
+        replyCount={post.replies_count}
+        boostCount={post.reblogs_count}
+        favCount={post.favourites_count}
+      />
     </PostContainer>
   );
 }

@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 interface Props {
   replyCount: number;
+  boostCount: number;
+  favCount: number;
 }
 
 const Actions = styled.div`
@@ -13,12 +15,16 @@ const Actions = styled.div`
   padding: 0 8px 12px;
 `;
 
-export default function PostFooter({ replyCount }: Props) {
+export default function PostFooter({
+  replyCount,
+  boostCount,
+  favCount,
+}: Props) {
   return (
     <Actions>
       <PostAction icon={BiReply} value={replyCount} title="Reply" />
-      <PostAction icon={BiRepeat} value={0} title="Boost" />
-      <PostAction icon={BiStar} value={1} title="Favorite" />
+      <PostAction icon={BiRepeat} value={boostCount} title="Boost" />
+      <PostAction icon={BiStar} value={favCount} title="Favorite" />
       <PostAction icon={BiSave} title="Bookmark" />
     </Actions>
   );
