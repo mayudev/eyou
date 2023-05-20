@@ -6,4 +6,7 @@ export default styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  position: sticky;
+  top: 10px;
 `;

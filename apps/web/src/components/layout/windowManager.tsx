@@ -10,8 +10,7 @@ interface Props {
 }
 
 const Manager = styled.div<Props>`
-  height: calc(100vh - var(--taskbar-height));
-  box-sizing: border-box;
+  min-height: calc(100vh - var(--taskbar-height) - 64px);
 
   ${props =>
     props.center &&
@@ -27,6 +26,9 @@ const Manager = styled.div<Props>`
     display: grid;
     grid-template-columns: ${props.grid};
     gap: 16px;
+    grid-auto-rows: min-content;
+    align-items: start;
+    margin-bottom: 64px;
   `}
 
   ${props => props.padding && `padding: ${props.padding}px;`}

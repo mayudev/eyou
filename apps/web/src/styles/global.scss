@@ -2,6 +2,7 @@
 
 :root {
   background: url("/lainbg.jpg");
+  background-attachment: fixed;
   color: var(--color-fg-default);
 
   font-family: "Lexend", sans-serif;
@@ -12,4 +13,8 @@
 
 body {
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
